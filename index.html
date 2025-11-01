@@ -1,0 +1,698 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="keywords"
+      content="gouds icon, Gouds icon,gouds icon.com,gouds icon eetha kallu,eetha kallu site,site of gouds icon,eetha kallu site"
+    />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, viewport-fit=cover"
+    />
+    <title>Eetha Kallu - Home</title>
+    <link rel="icon" href="./logo without backgro.png" />
+
+    <!-- Bootstrap 5 CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      crossorigin="anonymous"
+    />
+
+    <!-- Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+
+    <style>
+      :root {
+        --accent1: #ffd700; /* bright yellow */
+        --accent2: #ffaa00; /* golden orange */
+        --header1: #ffd700; /* header gradient start */
+        --header2: #ffaa00; /* header gradient end */
+        --card-bg: #ffffff;
+        --muted: #6b4f00; /* soft dark brown */
+        --shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
+      }
+
+      body {
+        font-family: "Poppins", system-ui, -apple-system, "Segoe UI", Roboto,
+          "Helvetica Neue", Arial;
+        background: linear-gradient(120deg, #fdfbfb, #ebedee);
+        color: #222;
+        margin: 0;
+        padding-bottom: 120px;
+      }
+
+      /* Header */
+      header {
+        background: linear-gradient(90deg, var(--header1), var(--header2));
+        color: #fff;
+        position: sticky;
+        top: 0;
+        z-index: 1100;
+        box-shadow: var(--shadow);
+      }
+      .header-inner {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 10px 16px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 12px;
+      }
+      .brand-left {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+      }
+      .brand-left img {
+        height: 56px;
+        width: 56px;
+        object-fit: cover;
+        border-radius: 12px;
+        box-shadow: 0 6px 18px rgba(0, 0, 0, 0.2);
+      }
+      .brand-name {
+        font-size: 20px;
+        font-weight: 700;
+        letter-spacing: 0.3px;
+      }
+
+      /* Nav */
+      .nav-right a {
+        color: #fff;
+        text-decoration: none;
+        font-weight: 600;
+        padding: 8px 12px;
+        border-radius: 8px;
+        transition: transform 0.15s ease;
+        margin-left: 6px;
+      }
+      .nav-right a:hover {
+        transform: translateY(-3px);
+        opacity: 0.95;
+        text-decoration: none;
+      }
+      .buy-now {
+        background: linear-gradient(90deg, var(--accent1), var(--accent2));
+        padding: 9px 16px;
+        border-radius: 12px;
+        box-shadow: 0 8px 20px rgba(255, 65, 108, 0.15);
+      }
+
+      /* Promo slider (kept simple) */
+      .slider {
+        width: 100%;
+        margin: 18px 0;
+      }
+      .slide-track {
+        width: 100%;
+        height: 220px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      .slide {
+        width: 100%;
+        height: 100%;
+        border-radius: 12px;
+        overflow: hidden;
+        box-shadow: var(--shadow);
+        background: #fff;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      .slide img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        display: block;
+      }
+
+      /* Feature carousel (image + typed text) */
+      .feature-area {
+        max-width: 1200px;
+        margin: 18px auto;
+        padding: 10px;
+      }
+      .feature-card {
+        background: var(--card-bg);
+        border-radius: 12px;
+        box-shadow: var(--shadow);
+        overflow: hidden;
+      }
+      .feature-inner {
+        display: flex;
+        align-items: center;
+        gap: 0;
+        flex-wrap: wrap;
+        padding: 18px;
+      }
+      .feature-text {
+        flex: 1 1 400px;
+        padding: 10px 18px;
+      }
+      .feature-img {
+        flex: 0 0 420px; /* fixed image container width on desktop */
+        padding: 10px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      /* fixed image size box */
+      .feature-img .fixed-img {
+        width: 420px;
+        height: 300px;
+        border-radius: 10px;
+        overflow: hidden;
+        display: block;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+      }
+      .feature-img .fixed-img img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover; /* ensures consistent cropping */
+        display: block;
+      }
+
+      .typewriter {
+        font-size: 1.05rem;
+        color: #222;
+        line-height: 1.6;
+        min-height: 3.6rem; /* reserve space so layout doesn't jump */
+        border-right: 3px solid var(--accent2);
+        padding-right: 6px;
+        white-space: pre-wrap;
+        overflow: hidden;
+        animation: blink 1s infinite steps(1);
+      }
+      @keyframes blink {
+        50% {
+          border-color: transparent;
+        }
+      }
+
+      /* Carousel controls small */
+      .carousel-controls {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 12px;
+        padding: 10px 0;
+      }
+      .carousel-controls .btn {
+        border-radius: 10px;
+        box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+      }
+
+      /* Start shopping area */
+      .start-shopping {
+        text-align: center;
+        margin: 18px auto;
+        display: flex;
+        gap: 10px;
+        justify-content: center;
+        flex-wrap: wrap;
+      }
+
+      /* Floating contact buttons */
+      .floating-buttons {
+        position: fixed;
+        right: 20px;
+        bottom: 25px;
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+        z-index: 1200;
+      }
+      .floating-buttons a {
+        width: 54px;
+        height: 54px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: #fff;
+        text-decoration: none;
+        box-shadow: 0 8px 22px rgba(0, 0, 0, 0.14);
+        transition: transform 0.12s ease;
+      }
+      .floating-buttons a:hover {
+        transform: scale(1.08);
+        filter: brightness(1.03);
+      }
+      .floating-buttons .whatsapp {
+        background: #ffaa00;
+      }
+      .floating-buttons .map {
+        background: #ffd700;
+      }
+      .floating-buttons .call {
+        background: #ffaa00;
+      }
+
+      /* Responsive tweaks */
+      @media (max-width: 1024px) {
+        .feature-img {
+          flex: 0 0 360px;
+        }
+        .feature-img .fixed-img {
+          width: 360px;
+          height: 260px;
+        }
+        .slide-track {
+          height: 200px;
+        }
+      }
+
+      @media (max-width: 700px) {
+        .header-inner {
+          padding: 10px;
+        }
+        .brand-name {
+          font-size: 18px;
+        }
+        .feature-inner {
+          flex-direction: column-reverse;
+          gap: 12px;
+        }
+        .feature-img {
+          flex: 0 0 auto;
+        }
+        .feature-img .fixed-img {
+          width: 320px; /* mobile fixed size */
+          height: 220px; /* mobile fixed size */
+        }
+        .typewriter {
+          min-height: 6rem;
+        }
+      }
+
+      /* Small nice touches */
+      .muted {
+        color: var(--muted);
+      }
+      .section {
+        margin: 12px;
+        padding: 14px;
+        border-radius: 12px;
+        background: #fff;
+        box-shadow: var(--shadow);
+      }
+    </style>
+  </head>
+
+  <body>
+    <!-- HEADER -->
+    <header>
+      <div class="header-inner">
+        <div class="brand-left">
+          <img src="./image.png" alt="Etha kallu Logo" />
+          <div>
+            <div class="brand-name">Gouds icon</div>
+            <div class="muted" style="font-size: 12px">
+              Pure • Fresh • Local Eetha kallu
+            </div>
+          </div>
+        </div>
+
+        <nav class="nav-right d-flex align-items-center">
+          <a href="./index.html"><i class="fas fa-home me-1"></i>Home</a>
+          <a href="./history.html"><i class="fas fa-clock me-1"></i>History</a>
+          <a href="./about.html"
+            ><i class="fas fa-info-circle me-1"></i>About</a
+          >
+          <a href="./category.html" class="buy-now ms-2"
+            ><i class="fas fa-cart-plus me-2"></i>Buy Now</a
+          >
+        </nav>
+      </div>
+    </header>
+
+    <!-- PROMO SLIDER (kept) -->
+    <div class="slider">
+      <div class="slide-track" id="sliderTrack" aria-hidden="true"></div>
+    </div>
+
+    <!-- FEATURE CAROUSEL: images + typed text alternating sides -->
+    <section class="feature-area">
+      <div class="feature-card" id="featureCard">
+        <div class="feature-inner" id="featureInner">
+          <!-- content injected by JS -->
+        </div>
+      </div>
+
+      <div class="carousel-controls mt-3">
+        <button id="prevBtn" class="btn btn-light">
+          <i class="fas fa-chevron-left"></i> Prev
+        </button>
+        <div id="indicators" class="d-flex gap-2 align-items-center"></div>
+        <button id="nextBtn" class="btn btn-primary">
+          Next <i class="fas fa-chevron-right ms-2"></i>
+        </button>
+      </div>
+    </section>
+
+    <!-- Title + Typewriter (kept for backward compatibility) -->
+    <div class="section" style="max-width: 1200px; margin: 12px auto">
+      <h2 style="margin: 0 0 8px 0">V R Dairy</h2>
+      <div class="muted">Fresh from farm to your doorstep</div>
+    </div>
+
+    <!-- Promo Video -->
+    <div class="section" style="max-width: 1200px; margin: 12px auto">
+      <video
+        controls
+        autoplay
+        muted
+        loop
+        style="width: 100%; border-radius: 12px"
+      >
+        <source
+          src="./DAIRY HARVEST'S farm fresh milk _ company promo video _ Dairy farm..mp4"
+          type="video/mp4"
+        />
+        Your browser does not support the video tag.
+      </video>
+    </div>
+
+    <!-- Start Buttons -->
+    <div class="start-shopping">
+      <a href="./category.html"
+        ><button
+          class="btn btn-lg"
+          style="
+            background: linear-gradient(90deg, var(--accent1), var(--accent2));
+            color: #fff;
+            border-radius: 10px;
+            padding: 10px 18px;
+          "
+        >
+          Start Shopping 🛒
+        </button></a
+      >
+      <a href="./admin.html"
+        ><button class="btn btn-outline-secondary">Admin</button></a
+      >
+    </div>
+
+    <!-- Floating Contact Buttons -->
+    <div class="floating-buttons" aria-hidden="false">
+      <a
+        href="https://wa.me/919999999999"
+        target="_blank"
+        class="whatsapp"
+        title="WhatsApp"
+      >
+        <img
+          src="https://png.pngtree.com/element_our/md/20180626/md_5b321c98efaa6.jpg"
+          alt="Map"
+          style="
+            width: 38px;
+            height: 38px;
+            object-fit: contain;
+            border-radius: 50px;
+          "
+      /></a>
+
+      <!-- replace with your real map link -->
+      <a
+        href="https://goo.gl/maps/abcd1234EfGh"
+        target="_blank"
+        class="map"
+        title="Map"
+        aria-label="View Location"
+      >
+        <!-- your uploaded map icon   -->
+        <img
+          src="https://img.freepik.com/premium-vector/flat-icon-map-location_67813-3402.jpg"
+          alt="Map"
+          style="
+            width: 38px;
+            height: 38px;
+            object-fit: contain;
+            border-radius: 50px;
+          "
+        />
+      </a>
+
+      <a href="tel:+919999999999" class="call" title="Call"
+        ><img
+          src="https://png.pngtree.com/png-vector/20230909/ourmid/pngtree-black-phone-model-render-isolated-png-image_10009926.png"
+          alt="Map"
+          style="
+            width: 38px;
+            height: 38px;
+            object-fit: contain;
+            border-radius: 50px;
+          "
+      /></a>
+    </div>
+
+    <!-- Other product/sections (left as original content blocks) -->
+    <div class="section" style="max-width: 1200px; margin: 12px auto">
+      <div class="row g-3">
+        <div class="col-md-4">
+          <h4>Ghee</h4>
+          <p class="muted">Pure traditional ghee — rich aroma & nutrients.</p>
+        </div>
+        <div class="col-md-4">
+          <h4>Milk</h4>
+          <p class="muted">Fresh milk processed under strict hygiene.</p>
+        </div>
+        <div class="col-md-4">
+          <h4>Paneer & Butter</h4>
+          <p class="muted">Soft paneer, creamy butter made daily.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Bootstrap JS (for potential future usage) -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+      crossorigin="anonymous"
+    ></script>
+
+    <script>
+      /*******************************
+       * PROMO API slider (single image, 2s each)
+       *******************************/
+      const PROMO_API =
+        "https://script.google.com/macros/s/AKfycbwLlBRErTsmQl7g4G7w7IqrXo0tFTb1yoAAioHr1xqiE1PxYtJxfvrBlR30s9Js1JScWA/exec";
+      const sliderTrack = document.getElementById("sliderTrack");
+
+      async function loadPromotions() {
+        try {
+          const res = await fetch(PROMO_API);
+          const promos = await res.json();
+          if (!promos || promos.length === 0) {
+            sliderTrack.style.display = "none";
+            return;
+          }
+          const finalImgs = promos.map((p) => p.url).filter(Boolean);
+          if (finalImgs.length === 0) {
+            sliderTrack.style.display = "none";
+            return;
+          }
+
+          function showSlide(i) {
+            const url = finalImgs[i];
+            sliderTrack.innerHTML = "";
+            const div = document.createElement("div");
+            div.className = "slide";
+            const img = document.createElement("img");
+            img.src = url;
+            img.alt = "Promo";
+            img.onerror = () => (img.style.display = "none");
+            div.appendChild(img);
+            sliderTrack.appendChild(div);
+          }
+
+          let cur = 0;
+          showSlide(cur);
+          setInterval(() => {
+            cur = (cur + 1) % finalImgs.length;
+            showSlide(cur);
+          }, 2000);
+        } catch (err) {
+          console.error("Failed to load promotions:", err);
+          sliderTrack.style.display = "none";
+        }
+      }
+      loadPromotions();
+
+      /*******************************
+       * FEATURE CAROUSEL: slides array (image + text)
+       * - alternates sides
+       * - typed text appears word-by-word at 200ms
+       *******************************/
+      const slides = [
+        {
+          image:
+            "https://i.ytimg.com/vi/eq8X4A41zGA/hq720.jpg?sqp=-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD&rs=AOn4CLDtXvAQORVcGVOYYWD1EQcNdYlNaw",
+          title: "Farm Fresh Milk",
+          text: "Pure, unadulterated milk from healthy cows — pasteurized and packed with care for your family's daily nutrition.",
+        },
+        {
+          image:
+            "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTHmP1sekiLXQHqXuIk6t4g35rjN8JANKVTwA&s",
+          title: "Traditional Ghee",
+          text: "Slow-cooked ghee with authentic aroma and natural vitamins A, D, E and K — perfect for daily cooking and rituals.",
+        },
+        {
+          image:
+            "https://imagesvs.oneindia.com/webp/te/img/2023/03/toddy-1678356800.jpg",
+          title: "Soft Paneer",
+          text: "Freshly made paneer with soft texture and rich protein content — ideal for curries and snacks.",
+        },
+        {
+          image:
+            "https://dukaan.b-cdn.net/700x700/webp/projecteagle/images/968826b4-15e6-42a4-bafb-162e8d1d728b.jpg",
+          title: "Fresh Paneer Pack",
+          text: "Handmade paneer with a soft, melt-in-mouth texture — made daily for freshness.",
+        },
+      ];
+
+      const featureInner = document.getElementById("featureInner");
+      const indicators = document.getElementById("indicators");
+      let currentFeature = 0;
+      let wordTimeout = null;
+
+      // build indicators
+      function buildIndicators() {
+        indicators.innerHTML = "";
+        slides.forEach((s, idx) => {
+          const btn = document.createElement("button");
+          btn.className = "btn btn-sm btn-outline-secondary";
+          btn.innerText = idx + 1;
+          btn.addEventListener("click", () => {
+            showFeature(idx);
+          });
+          indicators.appendChild(btn);
+        });
+        updateIndicatorActive();
+      }
+      function updateIndicatorActive() {
+        const btns = indicators.querySelectorAll("button");
+        btns.forEach((b, i) => {
+          b.classList.toggle("active", i === currentFeature);
+        });
+      }
+
+      // render feature slide (alternating sides)
+      function renderFeature(idx) {
+        if (wordTimeout) clearTimeout(wordTimeout);
+
+        const slide = slides[idx];
+        const isEven = idx % 2 === 0; // even slides -> text left, image right
+        featureInner.innerHTML = "";
+
+        const textCol = document.createElement("div");
+        textCol.className = "feature-text";
+        const h3 = document.createElement("h3");
+        h3.innerText = slide.title;
+        h3.style.marginTop = "0";
+        h3.style.marginBottom = "8px";
+        const typed = document.createElement("div");
+        typed.className = "typewriter";
+        typed.id = "typedArea";
+        textCol.appendChild(h3);
+        textCol.appendChild(typed);
+
+        const imgCol = document.createElement("div");
+        imgCol.className = "feature-img";
+        const fixedBox = document.createElement("div");
+        fixedBox.className = "fixed-img";
+        const img = document.createElement("img");
+        img.src = slide.image;
+        img.alt = slide.title;
+        img.onerror = () => {
+          img.style.display = "none";
+        };
+        fixedBox.appendChild(img);
+        imgCol.appendChild(fixedBox);
+
+        if (isEven) {
+          featureInner.appendChild(textCol);
+          featureInner.appendChild(imgCol);
+        } else {
+          featureInner.appendChild(imgCol);
+          featureInner.appendChild(textCol);
+        }
+
+        startTyping(slide.text);
+      }
+
+      function startTyping(fullText) {
+        const typed = document.getElementById("typedArea");
+        if (!typed) return;
+        typed.textContent = ""; // reset
+        const words = fullText.split(" ");
+        let i = 0;
+        function nextWord() {
+          if (i < words.length) {
+            typed.textContent += words[i] + " ";
+            i++;
+            wordTimeout = setTimeout(nextWord, 200); // 200ms per word
+          } else {
+            typed.style.borderRight = "none";
+          }
+        }
+        typed.style.borderRight = "3px solid var(--accent2)";
+        nextWord();
+      }
+
+      function showFeature(idx) {
+        currentFeature = (idx + slides.length) % slides.length;
+        updateIndicatorActive();
+        renderFeature(currentFeature);
+      }
+
+      // next / prev controls
+      document.getElementById("prevBtn").addEventListener("click", () => {
+        showFeature((currentFeature - 1 + slides.length) % slides.length);
+      });
+      document.getElementById("nextBtn").addEventListener("click", () => {
+        showFeature((currentFeature + 1) % slides.length);
+      });
+
+      // init
+      buildIndicators();
+      showFeature(0);
+
+      // automatically advance features every 6 seconds
+      setInterval(() => {
+        showFeature((currentFeature + 1) % slides.length);
+      }, 6000);
+
+      /*******************************
+       * Keep your cart badge logic (if present)
+       *******************************/
+      function updateCartBadge() {
+        const cart = JSON.parse(localStorage.getItem("cart") || "[]");
+        const total = cart.reduce((s, i) => s + (i.qty || 0), 0);
+        const badge = document.getElementById("cartBadge");
+        if (!badge) return;
+        badge.style.display = total ? "inline-block" : "none";
+        badge.textContent = total;
+      }
+      updateCartBadge();
+
+      /*******************************
+       * Tap image to open in new tab
+       *******************************/
+      document.addEventListener("click", (e) => {
+        const el = e.target.closest(".feature-img img");
+        if (el) {
+          const src = el.src;
+          if (src) window.open(src, "_blank");
+        }
+      });
+    </script>
+  </body>
+</html>
